@@ -41,13 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\DotNETCommon\MetaData.cs">
-      <Link>Properties\MetaData.cs</Link>
-    </Compile>
-    <Compile Include="..\GitDependencies\DependencyManifest.cs">
+    <Compile Include="GitDependencies\DependencyManifest.cs">
       <Link>GitDependencies\DependencyManifest.cs</Link>
     </Compile>
-    <Compile Include="..\GitDependencies\Log.cs">
+    <Compile Include="GitDependencies\Log.cs">
       <Link>GitDependencies\Log.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
