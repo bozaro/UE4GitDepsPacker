@@ -2,3 +2,17 @@ language: csharp
 sudo: false
 script:
 - xbuild /p:Configuration=Shipping GitDepsPacker.csproj
+
+before_deploy:
+- zip bin/GitDepsPacker-$TRAVIS_TAG.zip -j bin/Shipping/*.exe
+
+deploy:
+  provider: releases
+  api_key:
+    secure: dUZVQD/r2258E/gEX/Lpw6FQsCPka2O8yV88FoiRDT3LkzPH8W9vreOPMAgWFY6elV2PdrP6F7EfcD2Pok0r/Y58YRMETdbt0R7KSulxDro+qj9Rm3Gw0xVi5wQ57XYu1s9HcSk/Cb9GLI/BWMRUbDZT5v/VUpDUUu5R445C0hr6oSmfjmSbHgNx71pC7XD4sQQ7w3Yru0bbFFlwsfYCu7xsGUnmAa0Y2sjJUfYNtlIkNd0Jvox2Cz+YevnkhMOnBKEQl7tJmcwtC/koPl8MTKShA5OlMguRHiiGLTAbqVhc3a3xPz/W9yiKtVoMCYBEhpF+53YWxCfL8LEBmTCby5dWbfFg/SAlrCUeY9pDV6XpfcZHg6qZZkG2yG2drMp/7zlrJQ50y0tXuxBattOVJ2tTNKeotBDqO13w5wAMeda/k36aPO7s99ElTfRJRUVzka4usOPguWj8pRYLNKcGz6JL80JQFxzeh94u+VR8LHogEKnanl8EeHiIe1mlxBjo6boP2sgNzEMLOZfUsXhpPqEC+cYoJCX+EUWp4PVZpAJcOoLpoRyXbOfSmWsZYndwfOOGtmmc7Jw+0YMCd8fkXA8b6DkyBtCeorP+GavAXBn7dOubWNAXEE7t4Bbq3VY+SF9mhXP4C5EtIsO/IjchR5JCw3u6QiUTEoXTGyYTFOM=
+  file_glob: true
+  file: bin/*.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
