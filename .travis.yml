@@ -1,0 +1,4 @@
+language: csharp
+sudo: false
+script:
+- xbuild /p:Configuration=Shipping GitDepsPacker.csproj

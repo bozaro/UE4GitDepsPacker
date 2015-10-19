@@ -1,4 +1,7 @@
-﻿# GitDepsPacker utility
+# GitDepsPacker utility
+
+[![Build Status](https://travis-ci.org/bozaro/UE4GitDepsPacker.svg?branch=master)](https://travis-ci.org/bozaro/UE4GitDepsPacker)
+
 
 This utility allows to create ```*.gitdeps.xml``` files for Unreal Engine 4.7+.
 
