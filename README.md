@@ -1,5 +1,6 @@
 # GitDepsPacker utility
 
+[![GitHub license](https://img.shields.io/github/license/bozaro/UE4GitDepsPacker.svg)](https://github.com/bozaro/UE4GitDepsPacker/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/bozaro/UE4GitDepsPacker.svg?branch=master)](https://travis-ci.org/bozaro/UE4GitDepsPacker)
 
 
